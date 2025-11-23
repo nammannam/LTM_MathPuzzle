@@ -11,7 +11,7 @@ LoginScreen::LoginScreen(NetworkManager *network, QWidget *parent)
 {
     setupUI();
     
-    // Connect network signals
+    // Connect network signals to handle event Exp: Signal loginSuccessful -> handler: onLoginSuccessful
     connect(networkManager, &NetworkManager::connected, this, &LoginScreen::onConnected);
     connect(networkManager, &NetworkManager::disconnected, this, &LoginScreen::onDisconnected);
     connect(networkManager, &NetworkManager::welcomeReceived, this, &LoginScreen::onWelcomeReceived);
